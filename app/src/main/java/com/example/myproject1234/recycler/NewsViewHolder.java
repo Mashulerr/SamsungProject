@@ -4,22 +4,23 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myproject1234.databinding.ItemNewBinding;
-import com.example.myproject1234.domain.New;
 
-public class NewViewHolder extends RecyclerView.ViewHolder {
+import com.example.myproject1234.databinding.ItemNewsBinding;
+import com.example.myproject1234.domain.News;
 
-    private ItemNewBinding binding;
-    private NewClickListener clickListener;
+public class NewsViewHolder extends RecyclerView.ViewHolder {
 
-    public NewViewHolder(ItemNewBinding binding, NewClickListener clickListener) {
+    private ItemNewsBinding binding;
+    private NewsClickListener clickListener;
+
+    public NewsViewHolder(ItemNewsBinding binding, NewsClickListener clickListener) {
         super(binding.getRoot());
         this.binding = binding;
         this.clickListener = clickListener;
     }
 
-    public void bind(New item) {
-        binding.tvId.setText(item.getId());
+    public void bind(News item) {
+        binding.tvId.setText(String.valueOf(item.getId()));
         binding.tvTitle.setText(item.getTitle());
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override

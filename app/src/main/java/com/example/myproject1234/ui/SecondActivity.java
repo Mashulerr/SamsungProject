@@ -1,4 +1,4 @@
-package com.example.myproject1234;
+package com.example.myproject1234.ui;
 
 import android.os.Bundle;
 
